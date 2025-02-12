@@ -1,0 +1,31 @@
+video {
+    display: block;
+    position: absolute;
+}
+
+.vids {
+    visibility: hidden;
+}
+
+.buttonevents {
+    display: none;
+}
+
+#subway {
+    justify-content: flex-end;
+    height: 30%;
+    
+}
+
+#jumpnrun {
+    justify-content: flex-end;
+    height: 30%;
+    right: 34%;
+    display: flex;
+}
+
+#familyguy {
+    justify-content: flex-end;
+    height: 30%;
+    right:0%;
+}
