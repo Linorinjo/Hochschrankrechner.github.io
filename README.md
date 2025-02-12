@@ -1,1 +1,0 @@
-# Linorinjo.github.io
