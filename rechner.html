@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hochschrank Diagonale Rechner</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding: 20px; background: #f0f2f5; }
+        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 350px; }
+        h2 { color: #333; font-size: 1.2rem; margin-top: 0; }
+        label { display: block; margin: 10px 0 5px; font-size: 0.9rem; color: #666; }
+        input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
+        .result-box { margin-top: 20px; padding: 15px; background: #e7f3ff; border-radius: 6px; text-align: center; }
+        #result { font-weight: bold; color: #007bff; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>📐 Diagonalen-Rechner</h2>
+    <p style="font-size: 0.8rem; color: #888;">Check, ob dein Schrank beim Aufstellen passt.</p>
+    
+    <label for="height">Höhe des Schranks (a) in cm:</label>
+    <input type="number" id="height" placeholder="z.B. 236" oninput="calculate()">
+
+    <label for="depth">Tiefe des Schranks (b) in cm:</label>
+    <input type="number" id="depth" placeholder="z.B. 58" oninput="calculate()">
+
+    <div class="result-box">
+        <span>Kanten-Diagonale (c):</span><br>
+        <span id="result">0</span> cm
+    </div>
+</div>
+
+<script>
+    function calculate() {
+        const a = document.getElementById('height').value;
+        const b = document.getElementById('depth').value;
+        const resultElement = document.getElementById('result');
+
+        if (a > 0 && b > 0) {
+            // Die Formel: c = Wurzel aus (a^2 + b^2)
+            const c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+            resultElement.innerText = c.toFixed(2);
+        } else {
+            resultElement.innerText = "0";
+        }
+    }
+</script>
+
+</body>
+</html>
